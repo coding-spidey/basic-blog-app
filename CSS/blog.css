@@ -1,0 +1,125 @@
+.container{
+    display: grid;
+    grid-template-rows: 200px 3800px 200px;
+    grid-auto-flow: column;
+    grid-template-areas:
+    "hd"
+    "sub"
+    "ft";
+}
+.header{
+    background-color: black;
+    text-align: center;
+    padding-top: 50px;
+    grid-area: "hd";
+    color: white;
+}
+.subBox{
+    display: grid;
+    grid-gap: 15px;
+    margin-top: 15px;
+    grid-area: "sub";
+    grid-template-columns: repeat(8, 1 fr);
+    grid-template-rows: repeat(3, 1 fr);
+    grid-template-areas: 
+    "sd"
+    "main"
+    "main";
+}
+.content{
+    grid-area: "main";
+    width: 700px;
+    padding-left: 200px;
+    align-content: center;
+}
+.side{
+    grid-area: "sd";
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+.footer{
+    align-content: flex-end;
+    border-bottom: 3px solid crimson;
+    display: grid;
+    padding-left: 15px;
+    grid-area: "ft";
+    color : #311b92;
+    grid-template-columns: 100px 30px 30px;
+    grid-gap: 40px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+.author{
+    padding: 2px 16px;
+  }
+figcaption{
+    padding-left: 50px;
+    text-align: center;
+    color: grey;
+}
+a:link{
+    color: black;
+    text-decoration: none;
+    font-style: oblique;
+}
+a:visited{
+    color: rgb(34, 31, 31);
+}
+a:hover{
+    color: rgb(196, 65, 65);
+}
+#avatar{
+    width: 100%;
+    /* height: 25%; */
+}
+#img{
+    margin-left: 50px;
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+}
+#first{
+    margin-top: 20px;
+}
+#second{
+    margin-top: 20px;
+}
+#end{
+    font-style: italic;
+}
+@media (min-width : 900px) and (max-width : 1100px) {
+    .subBox{
+        grid-template-areas: 
+        "main main main main main sd sd sd"
+        "main main main main main sd sd sd"
+        "main main main main main sd sd sd";
+    }
+    .side{
+        border-left: 2px solid black;
+        padding-left: 15px;
+        margin-right: 15px;
+        width: 200px;
+        height: 600px;
+    }
+}
+@media(min-width : 1101px) {
+    .subBox{
+        grid-template-areas: 
+        "main main main main sd sd sd sd"
+        "main main main main sd sd sd sd"
+        "main main main main sd sd sd sd";
+    }
+    .side{
+        border-left: 1px solid rgb(49, 48, 48);
+        padding-left: 15px;
+        margin-right: 15px;
+        width: 250px;
+        height: 600px;
+    }
+}

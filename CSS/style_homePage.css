@@ -1,0 +1,61 @@
+@import "style1.css";
+@import "style2.css";
+@import "style3.css";
+.side{
+    border-right: 2px solid gray;
+    padding-right: 15px;
+    margin-left: 15px;
+    grid-area: "sd";
+    color : gray;
+}
+.content{
+    grid-area: "main";
+    color: gray;
+}
+.footer{
+    align-content: flex-end;
+    border-bottom: 3px solid crimson;
+    display: flexbox;
+    flex-direction: row;
+    padding-left: 15px;
+    grid-area: "ft";
+    color : #311b92;
+    /* grid-template-columns: 100px 30px 30px; */
+    grid-gap: 40px;
+}
+a:link{
+    color: black;
+    text-decoration: none;
+    font-style: oblique;
+}
+#about{
+    color: black;
+}
+#first{
+    margin: 20px;
+}
+#second{
+    margin: 20px;
+}
+@media (min-width : 900px) and (max-width : 1100px) {
+    .sub_box{
+        grid-template-areas: 
+        "sd sd sd main main main main main"
+        "sd sd sd main main main main main"
+        "sd sd sd main main main main main";
+    }
+    .side{
+        width: 200px;
+    }
+}
+@media(min-width : 1101px) {
+    .sub_box{
+        grid-template-areas: 
+        "sd sd sd sd main main main main"
+        "sd sd sd sd main main main main"
+        "sd sd sd sd main main main main";
+    }
+    .side{
+        width: 250px;
+    }
+}

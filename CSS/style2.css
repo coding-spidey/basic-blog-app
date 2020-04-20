@@ -1,0 +1,8 @@
+.header{
+    background-image: url(https://image.shutterstock.com/image-photo/school-stationary-on-blue-background-260nw-1124845913.jpg);
+    background-size: cover;
+    padding-top: 50px;
+    text-align: center;
+    grid-area: "hd";
+    color: black;
+}

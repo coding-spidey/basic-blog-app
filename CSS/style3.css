@@ -1,0 +1,12 @@
+.sub_box{
+    display: grid;
+    grid-gap: 15px;
+    margin-top: 15px;
+    grid-area: "sub";
+    grid-template-columns: repeat(8, 1 fr);
+    grid-template-rows: repeat(3, 1 fr);
+    grid-template-areas: 
+    "sd"
+    "main"
+    "main";
+}
